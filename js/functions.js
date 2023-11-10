@@ -73,7 +73,7 @@ var boolean = true; //false
 var array_num = [1,2,3,4,5];
 var array_text = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"];
 var array_mix = [1, "a", 2, "c"];
-var array_mul = [
+let array_mul = [
     {name:"Wilder",last_name:"Duarte", age:"21"},
     {name:"Angela",last_name:"guerrero", age:"22"},
     {name:"celeste",last_name:"perez", age:"25"},
@@ -126,11 +126,6 @@ do{
     z++;
 }while(z<array_text.length);
 
-/*
-function load_page(){
-    alert("la pagina se ha cargado completamente")
-}
-*/
 function change_color(){
     document.body.style.backgroundColor = "#000000";
     document.body.style.color = "#00FF00";
@@ -142,6 +137,18 @@ clear_color.addEventListener("click", () =>{
     document.body.style.color = "black";
 
 });
+
+function load_page(){
+    document.getElementById("nombres").focus();
+    document.getElementById("apellidos").disabled=true;
+    let date = new Date();
+    console.log(date);
+    for(let j=0;j<array_mul.length;j++){
+        console.log(array_mul);
+    }
+    
+    
+}
 
 //registro formulario
 const form_register = document.getElementById("form_register");
@@ -163,3 +170,19 @@ form_register.addEventListener("submit", name_event => {
     }
     information.innerText = info;
 })
+
+
+
+
+function validate(){
+    let nombres = document.getElementById("nombres");
+    if(nombres.value.length>2){
+        nombres.style.border = "2px solid green";
+        document.getElementById("apellidos").disabled = false;
+        document.getElementById("apellidos").focus();
+        document.getElementById("nombres").value ="";
+        alert(nombres.value.concat("Duarte"));
+    }
+    
+}
+
