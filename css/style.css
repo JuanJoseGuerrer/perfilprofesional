@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -37,7 +41,8 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/wilderduarte_frontpage.jpg');
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('/images/fondojavascript.png');
+    
     background-size: cover;
     clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
     z-index: -1;
@@ -119,6 +124,10 @@ body{
     border-radius: 32px;
 }
 
+.btn:hover{
+    background-color: #3282ce;
+}
+
 /* about */
 
 .about{
@@ -160,6 +169,10 @@ body{
 
 /* options */
 
+#infopersonal{
+    scroll-margin-top: 8ex;
+}
+
 .options{
     background-color: #e5e5f7;
     background-image: linear-gradient(#444cf7 0.5px, transparente 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
@@ -176,17 +189,34 @@ body{
 }
 
 .options_picture{
-    max-width: 500px;
+    max-width: 300px;
+    display: block;
+    flex-direction: column;
+    
 }
 
 .options_paragraph{
     line-height: 1.7;
     margin-bottom: 15px;
+    
 }
 
 .options_img{
-    width: 100%;
+    margin-left: 200px;
+    width: 350px;
     display: block;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    filter: brightness(50%), saturate(321%);
+    height: auto;
+    transition: transform .3s;
+
+    
+}
+
+.options_img:hover{
+    transform: scale(1.2);
 }
 /* slider */
 
@@ -258,6 +288,7 @@ body{
     gap: 2em;
     padding-top: 50px;
     padding-bottom: 100px;
+    
 }
 
 .questions_padding{
@@ -275,6 +306,7 @@ body{
 .questions_answer{
     padding: 0 30px 0;
     overflow: hidden;
+    
 }
 
 .questions_title{
@@ -324,6 +356,8 @@ body{
     margin: 0 auto;
     margin-bottom: 30px;
 }
+
+
 /* footer */
 
 .footer {
@@ -360,13 +394,17 @@ body{
     display: flex;
     margin: 0;
     margin-right: 20px;
-    flex-wrap: wrap;    
+    flex-wrap: wrap; 
+    font-size: 12px;  
+     
 }
 
 .footer_inputs{
     margin-top: 10px;
-    display: flex;
+    display: grid;
     overflow: hidden;
+    
+
 }
 
 .footer_input{
@@ -411,3 +449,11 @@ body{
 .footer_img{
     width: 30px;
 }
+
+#img_logo{
+    max-width: 100%;
+    
+
+}
+
+
