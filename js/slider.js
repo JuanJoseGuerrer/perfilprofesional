@@ -30,14 +30,3 @@
 
 })();
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        var destino = document.querySelector(this.getAttribute('href'));
-
-        destino.scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
